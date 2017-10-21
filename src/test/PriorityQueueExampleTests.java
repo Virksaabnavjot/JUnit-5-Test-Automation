@@ -22,7 +22,8 @@ class PriorityQueueExampleTests {
 
 	@Test
 	void testPriorityQueueIsNotEmpty() {
-	     assertTrue(!priorityQueue.isEmpty());
+		pq.addElementsToThePriorityQueue();
+	    assertTrue(!priorityQueue.isEmpty());
 	}
 
 }
