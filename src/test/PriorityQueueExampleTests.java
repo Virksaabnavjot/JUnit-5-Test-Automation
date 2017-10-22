@@ -27,10 +27,10 @@ class PriorityQueueExampleTests {
 	}
 	
 	@Test
-	void testIfTheCorrectElementIsRemoved() {
+	void testIfTheCorrectElementIsRemovedBasedOnStringLengthBigToSmall() {
 		pq.addElementsToThePriorityQueue();
 		//assertEquals(expected value, actual value)
-		assertEquals(priorityQueue.poll(), "Banana");
+		assertEquals(priorityQueue.poll().length(), "Banana".length());
 	}
 
 }
