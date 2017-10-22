@@ -25,5 +25,12 @@ class PriorityQueueExampleTests {
 		pq.addElementsToThePriorityQueue();
 	    assertTrue(!priorityQueue.isEmpty());
 	}
+	
+	@Test
+	void testIfTheCorrectElementIsRemoved() {
+		pq.addElementsToThePriorityQueue();
+		//assertEquals(expected value, actual value)
+		assertEquals(priorityQueue.poll(), "Banana");
+	}
 
 }
