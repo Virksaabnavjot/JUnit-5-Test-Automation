@@ -15,7 +15,7 @@ class PriorityQueueExampleTests {
 	PriorityQueueExample pq = new PriorityQueueExample();
 	private static Queue<String> priorityQueue = new PriorityQueue();
 	private static Queue<String> priorityQueue2 = new PriorityQueue();
-	
+
 	@BeforeEach
 	void setUp() throws Exception {
 		priorityQueue = pq.getPriorityQueue();
@@ -26,21 +26,21 @@ class PriorityQueueExampleTests {
 	void testPriorityQueueIsNotEmpty() {
 		pq.addElementsToThePriorityQueue();
 		pq.addElementsToThePriorityQueue2();
-	    assertTrue(!priorityQueue.isEmpty());
-	    assertTrue(!priorityQueue.isEmpty());
+		assertTrue(!priorityQueue.isEmpty());
+		assertTrue(!priorityQueue.isEmpty());
 	}
-	
+
 	@Test
 	void testIfTheCorrectElementIsRemovedBasedOnStringLengthBigToSmall() {
 		pq.addElementsToThePriorityQueue();
-		//assertEquals(expected value, actual value)
+		// assertEquals(expected value, actual value)
 		assertEquals(priorityQueue.poll().length(), "Banana".length());
 	}
 
 	@Test
 	void testIfTheCorrectElementIsRemovedBasedOnAlphabeticalOrderAtoZ() {
 		pq.addElementsToThePriorityQueue2();
-		//assertEquals(expected value, actual value)
+		// assertEquals(expected value, actual value)
 		assertEquals(priorityQueue2.poll(), "Apple");
 	}
 }
