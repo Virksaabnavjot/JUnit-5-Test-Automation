@@ -12,15 +12,19 @@ public class PriorityQueueExample {
 	private static AlphabeticalPriority alphaBasedComparator = new AlphabeticalPriority();
 	private static StringLengthPriority lengthBasedComparator = new StringLengthPriority();
 	private static Queue<String> priorityQueue = new PriorityQueue(6, lengthBasedComparator);
+	private static Queue<String> priorityQueue2 = new PriorityQueue(6, alphaBasedComparator);
+	
 	
 	public static void main(String[] args) {
 		addElementsToThePriorityQueue();
-		println(priorityQueue.size());
-		println(priorityQueue);
+		println("Size: "+priorityQueue.size());
+		println("Queue 1: "+priorityQueue);
+		println("Sorted Queue based on Length of String Big to Small");
 		for(int i = -4; i <= priorityQueue.size(); i++) {
-		println(priorityQueue.poll());
+		println("Index at: "+i+" ,String: "+priorityQueue.poll());
 		}
 
+		addElementsToThePriorityQueue2();
 	}
 
 	public static void addElementsToThePriorityQueue() {
@@ -33,8 +37,25 @@ public class PriorityQueueExample {
 			
 	}
 	
+	public static void addElementsToThePriorityQueue2() {
+		priorityQueue2.add("Man");
+		priorityQueue2.add("Apple");
+		priorityQueue2.add("Cat");
+		priorityQueue2.add("Zebra");
+		priorityQueue2.add("Horse");
+		priorityQueue2.add("Banana");
+	}
+	
 	public static Queue<String> getPriorityQueue() {
 		return priorityQueue;
+	}
+
+	public static Queue<String> getPriorityQueue2() {
+		return priorityQueue2;
+	}
+
+	public static void setPriorityQueue2(Queue<String> priorityQueue2) {
+		PriorityQueueExample.priorityQueue2 = priorityQueue2;
 	}
 
 	public static void setPriorityQueue(Queue<String> priorityQueue) {
