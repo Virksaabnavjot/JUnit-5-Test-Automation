@@ -2,12 +2,11 @@ package com.navjot.junit;
 
 import java.util.Comparator;
 
-public class AlphabeticalPriority implements Comparator<Object>{
+public class AlphabeticalPriority implements Comparator<String>{
 
 	@Override
-	public int compare(Object arg0, Object arg1) {
-		
-		return 0;
+	public int compare(String s1, String s2) {
+		return s1.compareTo(s2);
 	}
 
 }

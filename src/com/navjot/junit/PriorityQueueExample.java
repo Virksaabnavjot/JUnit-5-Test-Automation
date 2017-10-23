@@ -25,6 +25,12 @@ public class PriorityQueueExample {
 		}
 
 		addElementsToThePriorityQueue2();
+		println("Size: "+priorityQueue2.size());
+		println("Queue 2: "+priorityQueue2);
+		println("Sorted Queue based on Alphabetical Order A to Z");
+		for(int i = -4; i <= priorityQueue2.size(); i++) {
+		println("Index at: "+i+" ,String: "+priorityQueue2.poll());
+		}
 	}
 
 	public static void addElementsToThePriorityQueue() {
